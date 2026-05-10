@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-food-facts-data-quality-case-study"
+version = "0.1.0"
+description = "Streaming + DuckDB profiling and quality analysis of Open Food Facts (50k-record sample, ODbL)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Seyyid", email = "seyyidsahin2834@gmail.com" }
+]
+keywords = ["data-quality", "open-food-facts", "duckdb", "etl", "pandas", "streaming"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --strict-markers"
