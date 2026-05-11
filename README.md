@@ -25,6 +25,18 @@ broken open dataset:
 
 ---
 
+## Recruiter skim
+
+| Item | Detail |
+|---|---|
+| Dataset | Open Food Facts public product catalog |
+| Scope | Streamed JSONL sample from a >5 GB compressed dump plus committed sample for CI |
+| Tools | DuckDB, streaming gzip/JSONL, Python, Pandas, Matplotlib, pytest |
+| Main signal | Memory-safe ingest plus completeness and plausibility checks |
+| Best artifacts | [`src/download_data.py`](src/download_data.py), [`sql/quality_checks.sql`](sql/quality_checks.sql), [`reports/data_quality_report.md`](reports/data_quality_report.md), [`reports/figures/`](reports/figures/) |
+
+---
+
 ## Streaming strategy (no full download)
 
 The OFF dump is a single gzipped JSON-Lines file well over 5 GB compressed.
